@@ -16,6 +16,8 @@ float function(float x) {
     case 4: return log(x) + sin(x);
     case 5: return exp(x) + sin(x);
     case 6: return sqrt(x) * tan(x) * sin(2 * x);
+    case 7: return 1 / x;
+    case 8: return x * x * x *x - 1 / x;
     default: return sin(x);
     }
 }
@@ -103,6 +105,8 @@ int main(int argc, char** argv) {
     cout << "4: y = log(x)+sin(x)\n";
     cout << "5: y = exp(x)+sin(x)\n";
     cout << "6: y = sqrt(x)*tan(x)*sin(2*x)\n";
+    cout << "7: y = 1/x\n";
+    cout << "8: y = x^4 - 1/x\n";
     cin >> selectedFunction;
 
     glutInit(&argc, argv);
