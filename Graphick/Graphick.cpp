@@ -17,7 +17,7 @@ float function(float x) {
     case 5: return exp(x) + sin(x);
     case 6: return sqrt(x) * tan(x) * sin(2 * x);
     case 7: return 1 / x;
-    case 8: return x * x * x *x - 1 / x;
+    case 8: return x * x * x * x - 1 / x;
     default: return sin(x);
     }
 }
@@ -46,14 +46,6 @@ void drawAxes() {
     glVertex2f(0, yMax);
     glEnd();
 
-    for (int i = xMin; i <= xMax; ++i) {
-        glRasterPos2f(i, -0.5f);
-        glutBitmapCharacter(GLUT_BITMAP_8_BY_13, '0' + abs(i % 10));
-    }
-    for (int i = yMin; i <= yMax; ++i) {
-        glRasterPos2f(-0.5f, i);
-        glutBitmapCharacter(GLUT_BITMAP_8_BY_13, '0' + abs(i % 10));
-    }
 }
 
 void drawGraph() {
